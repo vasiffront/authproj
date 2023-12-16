@@ -1,0 +1,38 @@
+services:
+  shop:
+    container_name: shop
+    image: kwist/shop_image:v1
+    ports:
+      - 8080:8080
+    restart: on-failure
+    environment:
+      spring.datasource.url: jdbc:postgresql://postgres:5432/shop
+    networks:
+      - network_shop
+  postgres:
+    container_name: postgres-shop
+    image: postgres:15.3
+    restart: always
+    ports:
+      - 8081:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      PGDATA: /data/postgres
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/1-init.sql
+      - db_data_shop:/data/postgres
+    networks:
+      - network_shop
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+networks:
+  network_shop:
+    driver: bridge
+
+volumes:
+  db_data_shop:
