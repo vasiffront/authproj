@@ -7,14 +7,13 @@ import router from './router';
 
 const appStore = useAppStore()
 
-onMounted(() => {
+onMounted(async () => {
   if (!appStore.isAuthenticated && localStorage.getItem("refreshToken")) {
-    appStore.refresh();
+    await appStore.refresh();
     console.log("authenticated")
   } else {
     console.log("not authenticated")
   }
-  router.push("/")
 })
 </script>
 

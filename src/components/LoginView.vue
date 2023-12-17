@@ -1,31 +1,26 @@
 <template>
-    <form  @submit.prevent="handleSubmit" class="d-flex flex-column align-self-center bg-white p-5 rounded-5 text-start" style="width:35%">
+    <form @submit.prevent="handleSubmit" class="d-flex flex-column align-self-center bg-white p-5 rounded-5 text-start"
+        style="width:35%">
         <h3>Вход</h3>
 
         <div class="form-group">
-            <label>Email</label>
-            <input type="email" class="form-control" v-model="email" placeholder="email"/>
+            <label>Email или телефон</label>
+            <input type="email" class="form-control" v-model="auth.searchField" placeholder="email или телефон" />
         </div>
 
         <div class="form-group">
             <label>Пароль</label>
-            <input type="password" class="form-control" v-model="password" placeholder="Пароль"/>
+            <input type="password" class="form-control" v-model="auth.password" placeholder="Пароль" />
         </div>
 
         <button class="btn btn-primary btn-block">Вход</button>
     </form>
 </template>
 
-<script>
-    
-    export default{
-
-        name: 'LoginView',
-        data(){
-            return{
-                email: '',
-                password: ''
-            }
-        }
-    }
+<script setup>
+import { ref } from 'vue'
+const auth = ref({
+    searchField: "",
+    password: "",
+})
 </script>

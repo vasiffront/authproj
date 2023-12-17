@@ -7,6 +7,7 @@ const appStore = useAppStore()
 const account = ref({
     firstName: '',
     lastName: '',
+    phone: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -39,6 +40,10 @@ const register = async () => {
         <div class="form-group">
             <label>Email</label>
             <input type="email" class="form-control" v-model="account.email" placeholder="Email" />
+        </div>
+        <div class="form-group">
+            <label>Телефон</label>
+            <input type="text" class="form-control" v-model="account.phone" placeholder="Phone" />
         </div>
         <div class="form-group">
             <label>Пароль</label>

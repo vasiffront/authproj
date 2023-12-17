@@ -4,7 +4,7 @@
             <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
 
-                    <h4>{{ appStore.account.firstName }}</h4>
+                    <h4>{{ appStore.account?.firstName }}</h4>
                     <p class="text-secondary mb-1">{{ appStore.getNormalizedAccountType }}</p>
                 </div>
             </div>
@@ -13,10 +13,10 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-3">
-                        <h6 class="mb-0">ФАМИЛИЯ</h6>
+                        <h6 class="mb-0">Фамилия</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        {{appStore.account.lastName}}
+                        {{appStore.account?.lastName}}
                     </div>
                 </div>
                 <hr>
@@ -25,7 +25,16 @@
                         <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        {{appStore.account.email}}
+                        {{appStore.account?.email}}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Телефон</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{appStore.account?.phone}}
                     </div>
                 </div>
                 <hr>
