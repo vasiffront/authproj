@@ -20,10 +20,11 @@ onMounted(() => {
 
 <template>
   <div id="app">
-    <NavigationView />
-    <div class="auth-wrapper">
-      <div class="auth-inner">
-        <RouterView />
+    <div class="wrapper">
+      <NavigationView />
+      <RouterView />
+      <div class="footer" style="background-color: white; padding: 6pt">
+        <span>(c) loh</span>
       </div>
     </div>
   </div>
@@ -75,11 +76,13 @@ onMounted(() => {
   transition: all .3s;
 }
 
-.auth-wrapper {
+.wrapper {
   display: flex;
-  justify-content: center;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
-  text-align: left;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .navbar-light {
