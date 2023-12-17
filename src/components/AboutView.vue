@@ -4,8 +4,8 @@
             <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
 
-                    <h4>ИМЯ</h4>
-                    <p class="text-secondary mb-1">физ или юр лицо</p>
+                    <h4>{{ appStore.account.firstName }}</h4>
+                    <p class="text-secondary mb-1">{{ appStore.getNormalizedAccountType }}</p>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
                         <h6 class="mb-0">ФАМИЛИЯ</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        Фамилия
+                        {{appStore.account.lastName}}
                     </div>
                 </div>
                 <hr>
@@ -25,7 +25,7 @@
                         <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        v@mai.com
+                        {{appStore.account.email}}
                     </div>
                 </div>
                 <hr>
@@ -34,10 +34,11 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'usPage'
-}
+<script setup>
+import { useAppStore } from '@/stores/AppStore'
+const appStore = useAppStore()
+
+
 </script>
 
 <style>

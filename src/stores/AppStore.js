@@ -7,6 +7,15 @@ export const useAppStore = defineStore("appStore", {
     accessToken: null,
     isAuthenticated: false,
   }),
+  getters: {
+    getNormalizedAccountType: (state) => {
+      if(state.account?.accountType === "PHYSICAL") {
+      return "Физическое лицо"
+      } else if(state.account?.accountType === "ORGANIZATION") {
+      return "Юридическое лицо"
+      }
+}
+  },
   actions: {
     async register(account) {
       const result = await axios.post("/api/public/sign-up", account);

@@ -14,7 +14,7 @@ onMounted(() => {
   } else {
     console.log("not authenticated")
   }
-  //router.push("/")
+  router.push("/")
 })
 </script>
 
@@ -62,7 +62,7 @@ onMounted(() => {
 }
 
 .auth-wrapper .form-control:focus {
-  border-color: #167bff;
+  border-color: #3a65a5;
   box-shadow: none;
 }
 
@@ -70,7 +70,7 @@ onMounted(() => {
   max-width: 40vw;
   margin: auto;
   background: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  box-shadow: 0px 14px 80px rgb(0, 0, 0);
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
   transition: all .3s;
@@ -95,7 +95,7 @@ onMounted(() => {
 }
 
 body {
-  background: #1c8ef9 !important;
+  background: #f4f4f5 !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
