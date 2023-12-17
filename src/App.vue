@@ -24,7 +24,7 @@ onMounted(() => {
       <NavigationView />
       <RouterView />
       <div class="footer" style="background-color: white; padding: 6pt">
-        <span>(c) loh</span>
+        
       </div>
     </div>
   </div>
