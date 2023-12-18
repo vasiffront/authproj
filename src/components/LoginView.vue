@@ -13,14 +13,23 @@
             <input type="password" class="form-control" v-model="auth.password" placeholder="Пароль" />
         </div>
 
-        <button class="btn btn-primary btn-block">Вход</button>
+        <button @click="loginUp" class="btn btn-primary btn-block">Вход</button>
     </form>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { useAppStore } from '@/stores/AppStore'
+import router from '@/router';
+import { ref } from 'vue' 
+
 const auth = ref({
-    searchField: "",
+    email: "",
     password: "",
 })
+const appStore = useAppStore()
+const loginUp = async () => {
+    const accountUnboxed = auth.value
+    await appStore.auth(accountUnboxed)
+    router.push("/userpage")
+}
 </script>

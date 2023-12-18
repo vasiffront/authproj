@@ -33,6 +33,10 @@ export const useAppStore = defineStore("appStore", {
       this.account = res.data.result.account;
       this.accessToken = res.data.result.accessToken;
       this.isAuthenticated = true;
+      localStorage.setItem(
+        "refreshToken",
+        res.data.result.refreshToken.tokenValue
+      );
     },
 
     async refresh() {
@@ -42,32 +46,14 @@ export const useAppStore = defineStore("appStore", {
         this.accessToken = null;
         this.isAuthenticated = false;
         return false;
-      }
-
-      try {
-        const res = await axios.get("/api/public/refresh", {
-          headers: {
-            Authorization: "Bearer " + refreshToken,
-          },
-        });
-
-        this.account = res.data.result.account;
-        this.accessToken = res.data.result.accessToken;
-        this.isAuthenticated = true;
-        localStorage.setItem(
-          "refreshToken",
-          res.data.result.refreshToken.tokenValue
-        );
         
-        return true;
-      } catch (error) {
+      }
+    },
+    async logOut(){
         localStorage.removeItem("refreshToken");
         this.account = null;
         this.accessToken = null;
         this.isAuthenticated = false;
-        console.log(error);
-        return false;
-      }
     },
 
     async getCurrentAccount() {

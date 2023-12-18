@@ -1,8 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 import { useAppStore } from '@/stores/AppStore'
+import router from '@/router';
 
 const appStore = useAppStore();
+const lgout = async() =>{
+  await appStore.logout()
+  router.push('/login')
+}
 
 </script>
 
@@ -36,7 +41,7 @@ const appStore = useAppStore();
         </ul>
         <ul class="navbar-nav ml-auto" v-else>
           <li class="nav-item">
-            <a href="javascript:void(0)" @click="handleClick" class="nav-link">Выход</a>
+            <a @click="lgout" class="nav-link">Выход</a>
           </li>
         </ul>
       </div>
