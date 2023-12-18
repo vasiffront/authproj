@@ -5,7 +5,7 @@ import router from '@/router';
 
 const appStore = useAppStore();
 const lgout = async() =>{
-  await appStore.logout()
+  await appStore.logOut()
   router.push('/login')
 }
 
@@ -33,15 +33,15 @@ const lgout = async() =>{
         </ul>
         <ul class="navbar-nav ml-auto" v-if="!appStore.isAuthenticated">
           <li class="nav-item">
-            <router-link to="/login" class="nav-link">Вход</router-link>
+            <router-link to="/login" class="btn btn-light">Вход</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/register" class="nav-link">Регистрация</router-link>
+            <router-link to="/register" class="btn btn-light">Регистрация</router-link>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto" v-else>
           <li class="nav-item">
-            <a @click="lgout" class="nav-link">Выход</a>
+            <button class="btn btn-light" @click="lgout">Выход</button>
           </li>
         </ul>
       </div>

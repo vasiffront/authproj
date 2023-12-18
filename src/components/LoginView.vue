@@ -5,7 +5,7 @@
 
         <div class="form-group">
             <label>Email или телефон</label>
-            <input type="email" class="form-control" v-model="auth.searchField" placeholder="email или телефон" />
+            <input type="text" class="form-control" v-model="auth.searchField" placeholder="email или телефон" />
         </div>
 
         <div class="form-group">
@@ -23,13 +23,13 @@ import router from '@/router';
 import { ref } from 'vue' 
 
 const auth = ref({
-    email: "",
+    searchField: "",
     password: "",
 })
 const appStore = useAppStore()
 const loginUp = async () => {
-    const accountUnboxed = auth.value
-    await appStore.auth(accountUnboxed)
+    const authUnboxed = auth.value
+    await appStore.auth(authUnboxed)
     router.push("/userpage")
 }
 </script>
