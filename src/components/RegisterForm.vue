@@ -27,7 +27,7 @@ const register = async () => {
 </script>
 
 <template>
-    <div class="d-flex flex-column align-self-center bg-white p-5 rounded-5 text-start" style="width:35%">
+    <div class="d-flex flex-column align-self-center bg-white p-5 rounded-5 text-start" style="width:500px">
         <h3>Регистрация</h3>
         <div class="form-group">
             <label>Имя</label>

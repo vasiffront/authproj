@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="handleSubmit" class="d-flex flex-column align-self-center bg-white p-5 rounded-5 text-start"
-        style="width:35%">
+        style="width:500px">
         <h3>Вход</h3>
 
         <div class="form-group">

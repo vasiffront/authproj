@@ -66,7 +66,7 @@ onMounted(async () => {
 }
 
 .auth-inner {
-  max-width: 40vw;
+ 
   margin: auto;
   background: #ffffff;
   box-shadow: 0px 14px 80px rgb(0, 0, 0);
