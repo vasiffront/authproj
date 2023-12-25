@@ -92,7 +92,7 @@ const items = ref([
 </script>
 <template>
 <div>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-content-center" style="position: sticky !important; width: max-content !important;">
         <PanelMenu :model="items" multiple class="w-full md:w-20rem" />
     </div>
     <div>
@@ -102,8 +102,5 @@ const items = ref([
 </template>
 
 <style>
-    .card{
-        max-width:max-content;
-        position: sticky;
-    }
+
 </style>
