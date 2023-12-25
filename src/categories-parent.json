@@ -1,0 +1,202 @@
+{
+  "result": [
+    {
+      "id": "5423c0cd-15e4-41a4-b04b-60709ceccfb7",
+      "dateCreated": "2023-12-24T10:31:21.996498",
+      "dateUpdated": "2023-12-24T10:31:21.996498",
+      "code": "Equipment",
+      "name": "Оборудование",
+      "isEnabled": true
+    },
+    {
+      "id": "bbc88a76-6afb-44a9-a6cb-dc1c524d1b1b",
+      "dateCreated": "2023-12-24T10:31:22.036056",
+      "dateUpdated": "2023-12-24T10:31:22.036056",
+      "code": "Dish",
+      "name": "Посуда",
+      "isEnabled": true
+    },
+    {
+      "id": "8cce81a8-ef9b-4dda-b7d4-6b95a6bd6a85",
+      "dateCreated": "2023-12-24T10:31:22.039992",
+      "dateUpdated": "2023-12-24T10:31:22.039992",
+      "code": "Grill",
+      "name": "Гриль",
+      "isEnabled": true
+    },
+    {
+      "id": "5ba1f7b6-1ed2-453e-83b9-ce97f31f1490",
+      "dateCreated": "2023-12-24T10:31:22.059757",
+      "dateUpdated": "2023-12-24T10:31:22.059757",
+      "code": "Electronics",
+      "name": "Электроника",
+      "isEnabled": true,
+      "parent": {
+        "id": "5423c0cd-15e4-41a4-b04b-60709ceccfb7",
+        "dateCreated": "2023-12-24T10:31:21.996498",
+        "dateUpdated": "2023-12-24T10:31:21.996498",
+        "code": "Equipment",
+        "name": "Оборудование",
+        "isEnabled": true
+      }
+    },
+    {
+      "id": "21b82f63-f3f8-4c64-83c9-6fa99b941f1e",
+      "dateCreated": "2023-12-24T10:31:22.080103",
+      "dateUpdated": "2023-12-24T10:31:22.080103",
+      "code": "Monitors",
+      "name": "Мониторы",
+      "isEnabled": true,
+      "parent": {
+        "id": "8bec3e09-34ec-468c-85b3-4aff04831327",
+        "dateCreated": "2023-12-24T10:31:22.070307",
+        "dateUpdated": "2023-12-24T10:31:22.070307",
+        "code": "Computers",
+        "name": "Компьютерная техника",
+        "parent": {
+          "id": "5ba1f7b6-1ed2-453e-83b9-ce97f31f1490",
+          "dateCreated": "2023-12-24T10:31:22.059757",
+          "dateUpdated": "2023-12-24T10:31:22.059757",
+          "code": "Electronics",
+          "name": "Электроника",
+          "isEnabled": true,
+          "parent": {
+            "id": "5423c0cd-15e4-41a4-b04b-60709ceccfb7",
+            "dateCreated": "2023-12-24T10:31:21.996498",
+            "dateUpdated": "2023-12-24T10:31:21.996498",
+            "code": "Equipment",
+            "name": "Оборудование",
+            "isEnabled": true
+          }
+        }
+      }
+    },
+    {
+      "id": "65242399-fb7d-412b-abaf-3cfd2551faa0",
+      "dateCreated": "2023-12-24T10:31:22.087672",
+      "dateUpdated": "2023-12-24T10:31:22.087672",
+      "code": "Curved",
+      "name": "Изогнутые мониторы",
+      "isEnabled": true,
+      "parent": {
+        "id": "21b82f63-f3f8-4c64-83c9-6fa99b941f1e",
+        "dateCreated": "2023-12-24T10:31:22.080103",
+        "dateUpdated": "2023-12-24T10:31:22.080103",
+        "code": "Monitors",
+        "name": "Мониторы",
+        "isEnabled": true,
+        "parent": {
+          "id": "8bec3e09-34ec-468c-85b3-4aff04831327",
+          "dateCreated": "2023-12-24T10:31:22.070307",
+          "dateUpdated": "2023-12-24T10:31:22.070307",
+          "code": "Computers",
+          "name": "Компьютерная техника",
+          "parent": {
+            "id": "5ba1f7b6-1ed2-453e-83b9-ce97f31f1490",
+            "dateCreated": "2023-12-24T10:31:22.059757",
+            "dateUpdated": "2023-12-24T10:31:22.059757",
+            "code": "Electronics",
+            "name": "Электроника",
+            "isEnabled": true,
+            "parent": {
+              "id": "5423c0cd-15e4-41a4-b04b-60709ceccfb7",
+              "dateCreated": "2023-12-24T10:31:21.996498",
+              "dateUpdated": "2023-12-24T10:31:21.996498",
+              "code": "Equipment",
+              "name": "Оборудование",
+              "isEnabled": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "5008e2a0-2d68-4db3-9284-9815a888fd61",
+      "dateCreated": "2023-12-24T10:31:22.096521",
+      "dateUpdated": "2023-12-24T10:31:22.097045",
+      "code": "Notebooks",
+      "name": "Ноутбуки",
+      "isEnabled": true,
+      "parent": {
+        "id": "8bec3e09-34ec-468c-85b3-4aff04831327",
+        "dateCreated": "2023-12-24T10:31:22.070307",
+        "dateUpdated": "2023-12-24T10:31:22.070307",
+        "code": "Computers",
+        "name": "Компьютерная техника",
+        "parent": {
+          "id": "5ba1f7b6-1ed2-453e-83b9-ce97f31f1490",
+          "dateCreated": "2023-12-24T10:31:22.059757",
+          "dateUpdated": "2023-12-24T10:31:22.059757",
+          "code": "Electronics",
+          "name": "Электроника",
+          "isEnabled": true,
+          "parent": {
+            "id": "5423c0cd-15e4-41a4-b04b-60709ceccfb7",
+            "dateCreated": "2023-12-24T10:31:21.996498",
+            "dateUpdated": "2023-12-24T10:31:21.996498",
+            "code": "Equipment",
+            "name": "Оборудование",
+            "isEnabled": true
+          }
+        }
+      }
+    },
+    {
+      "id": "f6b9de74-ec43-4e44-9e8c-3dcd4df5458e",
+      "dateCreated": "2023-12-24T10:31:22.102837",
+      "dateUpdated": "2023-12-24T10:31:22.102837",
+      "code": "Gaming",
+      "name": "Игровые ноутбуки",
+      "isEnabled": true,
+      "parent": {
+        "id": "5008e2a0-2d68-4db3-9284-9815a888fd61",
+        "dateCreated": "2023-12-24T10:31:22.096521",
+        "dateUpdated": "2023-12-24T10:31:22.097045",
+        "code": "Notebooks",
+        "name": "Ноутбуки",
+        "isEnabled": true,
+        "parent": {
+          "id": "8bec3e09-34ec-468c-85b3-4aff04831327",
+          "dateCreated": "2023-12-24T10:31:22.070307",
+          "dateUpdated": "2023-12-24T10:31:22.070307",
+          "code": "Computers",
+          "name": "Компьютерная техника",
+          "parent": {
+            "id": "5ba1f7b6-1ed2-453e-83b9-ce97f31f1490",
+            "dateCreated": "2023-12-24T10:31:22.059757",
+            "dateUpdated": "2023-12-24T10:31:22.059757",
+            "code": "Electronics",
+            "name": "Электроника",
+            "isEnabled": true,
+            "parent": {
+              "id": "5423c0cd-15e4-41a4-b04b-60709ceccfb7",
+              "dateCreated": "2023-12-24T10:31:21.996498",
+              "dateUpdated": "2023-12-24T10:31:21.996498",
+              "code": "Equipment",
+              "name": "Оборудование",
+              "isEnabled": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "fa82a3c8-6f96-4570-afe1-59c3e7a36eab",
+      "dateCreated": "2023-12-24T10:31:22.110315",
+      "dateUpdated": "2023-12-24T10:31:22.110315",
+      "code": "Plates",
+      "name": "Тарелки",
+      "isEnabled": true,
+      "parent": {
+        "id": "bbc88a76-6afb-44a9-a6cb-dc1c524d1b1b",
+        "dateCreated": "2023-12-24T10:31:22.036056",
+        "dateUpdated": "2023-12-24T10:31:22.036056",
+        "code": "Dish",
+        "name": "Посуда",
+        "isEnabled": true
+      }
+    }
+  ],
+  "status": "SUCCESS",
+  "success": true
+}

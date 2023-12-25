@@ -1,7 +1,7 @@
 services:
   shop:
     container_name: shop
-    image: kwist/shop_image:v1
+    image: kwist/shop_image:0.01.1
     ports:
       - 8080:8080
     restart: on-failure
