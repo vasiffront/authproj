@@ -40,15 +40,38 @@
                 <hr>
             </div>
         </div>
+        <div class="card">
+        <DataTable >
+            <Column  header="Номер"><p>asdasd</p></Column>
+            <Column  header="Время"></Column>
+            <Column  header="Категория"></Column>
+            <Column  header="Статус"></Column>
+        </DataTable>
     </div>
+    </div> 
+
 </template>
 
 <script setup>
-import { useAppStore } from '@/stores/AppStore'
+import { ref, reactive, onMounted } from 'vue';
+import { useAppStore } from '@/stores/AppStore';
+import router from '@/router';                   
+import PanelMenu from 'primevue/panelmenu';
+import Button from 'primevue/button';
+import Card from 'primevue/card';
+import DataView from 'primevue/dataview';
+import DataViewLayoutOptions from 'primevue/dataviewlayoutoptions';
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import ColumnGroup from 'primevue/columngroup'; 
+import Row from 'primevue/row';  
+
+
 const appStore = useAppStore()
 
 
 </script>
+
 
 <style>
 .card {
