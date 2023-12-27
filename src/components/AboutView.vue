@@ -41,11 +41,11 @@
             </div>
         </div>
         <div class="card">
-        <DataTable >
-            <Column  header="Номер"><p>asdasd</p></Column>
-            <Column  header="Время"></Column>
-            <Column  header="Категория"></Column>
-            <Column  header="Статус"></Column>
+        <DataTable :value="tableData">
+            <Column field="number" header="Номер"></Column>
+            <Column field="time" header="Время"></Column>
+            <Column field="category" header="Категория"></Column>
+            <Column field="status" header="Статус"></Column>
         </DataTable>
     </div>
     </div> 
@@ -53,12 +53,9 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from 'vue';
+import { ref, reactive } from 'vue';
 import { useAppStore } from '@/stores/AppStore';
 import router from '@/router';                   
-import PanelMenu from 'primevue/panelmenu';
-import Button from 'primevue/button';
-import Card from 'primevue/card';
 import DataView from 'primevue/dataview';
 import DataViewLayoutOptions from 'primevue/dataviewlayoutoptions';
 import DataTable from 'primevue/datatable';
@@ -68,7 +65,27 @@ import Row from 'primevue/row';
 
 
 const appStore = useAppStore()
+const tableData = ref([
+    {
+        number: '0001',
+        time: '10:00',
+        category: 'оборудование',
+        status: 'создано'
+    },
+    {
+        number: '0002',
+        time: '12:00',
+        category: 'посуда',
+        status: 'принято'
+    },
+    {
+        number: '0003',
+        time: '13:30',
+        category: 'оборудование',
+        status: 'готово'
+    }
 
+])
 
 </script>
 

@@ -38,7 +38,9 @@ const lgout = async() =>{
           <li class="nav-item">
             <router-link to="/register" class="btn btn-light">Регистрация</router-link>
           </li>
+          <li class="nav-item"><li class="nav-item"><i class="fa fa-cart-plus" aria-hidden="true" style="font-size: 30px;"></i></li></li>
         </ul>
+        
         <ul class="navbar-nav ml-auto" v-else>
           <li class="nav-item">
             <button class="btn btn-light" @click="lgout">Выход</button>

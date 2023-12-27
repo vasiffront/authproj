@@ -2,10 +2,6 @@
 import { ref, reactive } from 'vue'
 import { useAppStore } from '@/stores/AppStore'
 import router from '@/router';
-import PanelMenu from 'primevue/panelmenu';
-import 'primevue/resources/themes/lara-light-green/theme.css';
-import Button from 'primevue/button';
-import Card from 'primevue/card';
 import DataView from 'primevue/dataview';
 import DataViewLayoutOptions from 'primevue/dataviewlayoutoptions'
 
