@@ -8,6 +8,8 @@ import 'primevue/resources/themes/lara-light-green/theme.css';
 import Button from "primevue/button"
 import PanelMenu from 'primevue/panelmenu';
 import Card from 'primevue/card';
+import InputSwitch from 'primevue/inputswitch';
+import ToggleButton from 'primevue/togglebutton';
 
 
 const app = createApp(App)

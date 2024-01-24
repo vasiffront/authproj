@@ -18,10 +18,10 @@ const lgout = async() =>{
       <div class="collapse navbar-collapse" style="display: contents !important;">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <router-link to="/" class="nav-link">Каталог</router-link>
+            <router-link to="/catalog" class="nav-link">Каталог</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/" class="nav-link">Товары</router-link>
+            <router-link to="/goods" class="nav-link">Товары</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/" class="nav-link">Доставка</router-link>
@@ -44,6 +44,9 @@ const lgout = async() =>{
         <ul class="navbar-nav ml-auto" v-else>
           <li class="nav-item">
             <button class="btn btn-light" @click="lgout">Выход</button>
+          </li>
+          <li class="nav-item">
+            <router-link to="/userpage" class="btn btn-light">Личный Кабинет</router-link>
           </li>
         </ul>
       </div>
