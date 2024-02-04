@@ -4,7 +4,8 @@ import LoginView from "../components/LoginView.vue";
 import RegisterForm from "../components/RegisterForm.vue";
 import AboutView from "../components/AboutView.vue";
 import CategView from "../components/CategView.vue";
-import GoodsView from "../components/GoodsView.vue"
+import GoodsView from "../components/GoodsView.vue";
+import OrderPage from "../components/OrderPage.vue";
 
 export default createRouter({
   history: createWebHistory(),
@@ -14,6 +15,7 @@ export default createRouter({
     { path: "/register", component: RegisterForm },
     { path: "/userpage", component: AboutView},
     { path: "/catalog", component: CategView},
-    { path: "/goods", component: GoodsView}
+    { path: "/goods", component: GoodsView},
+    { path: "/order", component: OrderPage}
   ], 
 });
