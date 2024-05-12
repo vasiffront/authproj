@@ -14,8 +14,8 @@ export default createRouter({
     { path: "/login", component: LoginView },
     { path: "/register", component: RegisterForm },
     { path: "/userpage", component: AboutView},
-    { path: "/catalog", component: CategView},
-    { path: "/goods", component: GoodsView},
+    // { path: "/catalog", component: CategView},
+    // { path: "/goods", component: GoodsView},
     { path: "/order", component: OrderPage}
   ], 
 });

@@ -1,4 +1,13 @@
 services:
+  front:
+    container_name: front
+    build:
+      dockerfile: Dockerfile
+    ports: 
+      - 80:80
+    restart: on-failure
+    networks:
+      - network_shop
   shop:
     container_name: shop
     image: kwist/shop_image:0.01.1
@@ -20,7 +29,7 @@ services:
       POSTGRES_PASSWORD: root
       PGDATA: /data/postgres
     volumes:
-      - ./db/init.sql:/docker-entrypoint-initdb.d/1-init.sql
+      - /docker/db/init.sql:/docker-entrypoint-initdb.d/1-init.sql
       - db_data_shop:/data/postgres
     networks:
       - network_shop

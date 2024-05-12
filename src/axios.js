@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useAppStore } from "@/stores/AppStore";
 
-axios.defaults.baseURL = "http://localhost:8080/";
+axios.defaults.baseURL = import.meta.env.PROD
+  ? "http://79.174.91.206:8080"
+  : "http://localhost:8080";
 
 axios.interceptors.request.use(
   async (config) => {

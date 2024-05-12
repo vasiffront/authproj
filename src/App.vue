@@ -3,7 +3,6 @@ import { RouterView } from 'vue-router';
 import { onMounted } from 'vue'
 import NavigationView from './components/NavigationView.vue';
 import { useAppStore } from '@/stores/AppStore'
-import router from './router';
 
 const appStore = useAppStore()
 

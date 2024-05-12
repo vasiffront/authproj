@@ -17,12 +17,12 @@ const lgout = async() =>{
       <router-link to="/" class="navbar-brand">Home</router-link>
       <div class="collapse navbar-collapse" style="display: contents !important;">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link to="/catalog" class="nav-link">Каталог</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/goods" class="nav-link">Товары</router-link>
-          </li>
+          </li> -->
           <li class="nav-item">
             <router-link to="/" class="nav-link">Доставка</router-link>
           </li>
